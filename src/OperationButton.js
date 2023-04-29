@@ -1,8 +1,11 @@
 import { ACTIONS } from "./App";
 
-const OperationButton = ({ dispatch, operation }) => {
+const OperationButton = ({ dispatch, operation, className }) => {
    return (
-      <button onClick={() => dispatch({ type: ACTIONS.CHOOSE_OPERATION, payload: { operation } })}>
+      <button
+         className={className}
+         onClick={() => dispatch({ type: ACTIONS.CHOOSE_OPERATION, payload: { operation } })}
+      >
          {operation}
       </button>
    );
